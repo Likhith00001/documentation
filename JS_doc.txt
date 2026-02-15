@@ -1,0 +1,204 @@
+JS - Java script
+Brain (makes things move and react)
+Without JavaScript, websites are like photos.
+With JavaScript, websites become alive.
+what runs behind a button forms submition are javascript
+
+1. console is used to give output
+console.log("messege");//this will display message in console log
+console.alert("messege");// this wil create the alert window in the main html window
+
+1. varibles are defines in way using keywords
+let, var , const
+
+// var example
+var x = 10;
+var x = 20;   // Re-declaration allowed
+x = 30;       // Update allowed
+console.log(x); // Output: 30
+
+
+// let example
+let y = 10;
+// let y = 20; // Re-declaration NOT allowed
+y = 25;       // Update allowed
+console.log(y); // Output: 25
+
+
+// const example
+const z = 10;
+// z = 20;     // Re-assignment NOT allowed
+console.log(z); // Output: 10
+
+const numbers = [1, 2, 3];
+numers.push(4);  
+console.log(a);  
+numbers = [5, 6]; //inside element /oblect can still be changeble 
+
+
+// Block scope demonstration
+if (true) {
+  var a = 1;
+  let b = 2;
+  const c = 3;
+}
+
+console.log(a); // Works (var is function/global scoped)
+// console.log(b); //  Error (let is block scoped)
+// console.log(c); //  Error (const is block scoped)
+
+
+Hoisting:
+
+console.log(a);
+var a=10 // this will compile and run because it as globle scope 
+let a=20 //it give error becuase it has block scope and placed in temporal dead zone before declaration
+const a=30 //it give error becuase it has block scope and placed in temporal dead zone before declaration
+
+number mathematics
++ - * / // will works normally
+
+varibles declere in same way that of 
+let name ="likhith"
+let name=1
+let name= true //boolean
+
+condition statements
+if(condition){console.log()}
+ifelse else
+
+if(condition)?"condition true this print" : "condition false this print"
+
+
+Loops:
+for(let i=0;i<n;i++){condition}
+
+while(true){condition}
+
+foreach(n){condition}
+
+Function:
+function name(parameter){
+	conditions or statement which required
+	console.log("anything"+parameter);
+	console.log(`anything ${parameter}`)//for letterals use `
+	return parametr}
+name('passing parameter');//calling the function in the code
+
+condition function://creating the function that as one single line function
+let name=student.filter(function e{conditions})
+
+arrow functions// without using the function key word we can make use of arrow
+let name=students.filter(student=>student.marks)//=> is the arrow function that act as function
+let name=students.filter((student)=>{for multiple condition and must use return})// {}used then must use return statement
+
+Array(Lists)://both are same
+let name=[2,3,4];
+let name1=[{name:"likhith",marks:55}];
+
+
+advanced array:
+.foreach()// it act as for loop it access each element// need of the print inside loop beacause ouside doeas not run loop
+
+
+let stud=students.foreach((name)=>{console.log(name.names)})
+
+function checkPass() {
+    students.forEach(student => {
+        let result = student.score.marks >= 50 ? "pass" : "fail";
+        console.log(student.names + ":", result);
+    });
+}
+
+.filter()// it is going to filter out the required data on the condition. 
+
+
+.map()//it is going to map the array data to the array list.and this only give temparvory data and not modify the original data.
+
+let stud=students.map((name)=>{return name.marks*2})
+
+.reduce()// it is work on the array list thatcombaine the total data to single data
+let totalResult=students.reduce((score,student)=>score+student.marks,0); //here score is previous data set to zero that will we added to the next data incoming.
+console.log(totalResult/students.length());
+
+let students=[
+  { names: 'Likhith', marks: 75 },
+  { names: 'Ramesh', marks: 40 },
+  { names: 'Sita', marks: 90 },
+  { names: 'Anita', marks: 55 }
+];
+function topScorer() {
+    return students.reduce((top, student) => student.marks > top.marks ? student : top, students[0]);
+}
+// here student[0] is the first top student it iterate to every student and update the top student
+
+.sort()
+
+function sorting(){
+    let short=[...students].sort((a,b) => b.score?.marks-a.score?.marks);
+    console.log(short)
+}
+
+.find()
+
+Object is a real world entity that can be defined with many atributes.
+
+let student = {
+    name: "Likhith",
+    marks: 75,
+    isPassed: true
+};
+
+let student = {
+    name: "Likhith",
+    marks: {
+        math: 90,
+        english: 85
+    }
+};
+
+console.log(student.marks.math); // 90
+
+
+
+
+console.log(student.name)//used to call the atributes
+
+// to overcome this we can declire like this
+let {name,marks}=student
+
+console.log(name)// now we can directly call the atribute
+
+let {name,marks:{subject,mark},result}=student // now we can directlly call properties
+
+
+Spread Operators(...)//using this we can murge the elements with other list
+
+let arr1 = [1, 2, 3];
+let arr2 = [...arr1, 4, 5];
+console.log(arr2); // [1, 2, 3, 4, 5]
+
+Rest Operators(...)// to devide the one list into the two list we can use this
+
+let [first, ...rest] = [1, 2, 3, 4];
+console.log(first); // 1
+console.log(rest);  // [2, 3, 4]
+
+
+ let student = { name: "Likhith", marks: 75 };
+let newStudent = { ...student, marks: 90, age: 20 };// always new one replace old one
+console.log(newStudent);
+
+Optional Chaining (?.)//if we try to acceess undeclered or undifined variable from the call it will trough an error so we will use this insted
+let student = { name: "Likhith" };
+console.log(student.marks.math); // ❌ Error: Cannot read property 'math' of undefined
+console.log(student.marks?.math); // ✅ undefined, no error
+
+let student = {
+    name: "Likhith",
+    greet: () => "Hello!"
+};
+
+console.log(student.greet?.()); // Hello!
+console.log(student.sayHi?.()); // undefined, no error
+
