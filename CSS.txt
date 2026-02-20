@@ -1,0 +1,23 @@
+Cascding Style sheet
+
+first start from the elements from html file internal or external sheet
+<link rel="stylesheet" href="style.css"> this will link the external style sheet to the html file
+
+Basic structure of css
+selector {
+  property: value;
+  property: value;
+}
+Selector: This part points to the HTML element(s) you want to style. Selectors can target elements by their tag name (e.g., p, h1), class (e.g., .my-class), or ID (e.g., #my-id).
+Declaration Block: This is enclosed in curly braces ({}) and contains one or more declarations.
+Declaration: Each declaration is a pair of a property and a value, separated by a colon (:).
+Property: The style attribute you want to change (e.g., color, font-size, margin).
+Value: The specific setting for the property (e.g., blue, 16px, auto).
+Semicolon (;): Used to separate multiple declarations within a declaration block. The last declaration in a block doesn't technically need one, but it is considered best practice to always include it for consistency and easier code maintenance. 
+example:
+p {
+  color: blue;
+  font-size: 16px;
+}
+
+

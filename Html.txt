@@ -1,0 +1,155 @@
+Basic HTML Hyper text markup launguage structure
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="icon" href="image.link" type="image/png">
+    <link rel="stylesheet" href="style.css">
+	<script src="script.css"></script>
+</head>
+<body>
+	<h1>heading</h1>
+	<p>paragraph<p>
+    <div class="box">
+        <img src="image.link/source" alt="google image">
+        <br><input type="text" placeholder="Type to Think"><br><br>
+        <button type="button">google search</button>       <button type="button"> im happy</button>
+        </div>
+   
+</body>
+</html>
+
+<!DOCTYPE html>	A declaration that tells the browser the document type and version (HTML5 for the modern web).
+<html>	The root element that wraps all other elements in the document. It often includes a lang attribute to declare the page's primary language for accessibility and search engines.
+<head>	A container for metadata (data about the document) that is not displayed on the webpage itself. Key elements inside it include:
+     <meta charset="UTF-8">	Specifies the character encoding to handle most characters correctly.
+     <meta name="viewport">	Essential for responsive design on mobile devices.
+     <title>	Defines the title of the document, which appears in the browser's tab or window title bar and is important for SEO and bookmarks.
+     <link> / <style>	Links external CSS stylesheets or embeds styles directly.
+     <script>	Links external JavaScript files or embeds scripts (often placed at the end of the <body> for performance).
+<body>	Contains all the visible content of the web page, such as text, images, links, headings, and paragraphs.
+
+<header>: Represents introductory content or a group of navigational links, usually at the top of the page or a section.
+<nav>: Defines a block of major navigation links.
+<main>: Contains the unique content central to the current page. It should only appear once per page and be a direct child of the <body>.
+<article>: Encloses independent, self-contained content, such as a blog post or news story.
+<section>: Groups together content that constitutes a single thematic part of the page, typically with a heading.
+<aside>: Contains content that is related to the main content but separate from it (like a sidebar, glossary, or author bio).
+<footer>: Defines a footer for the document or a section, often containing copyright information, contact details, or related links. 
+
+list of html tags: https://www.geeksforgeeks.org/html/html-tags-a-to-z-list/  refer this link to know all the tags
+
+1. core HTML elements:
+
+<!DOCTYPE html> to specify languge to the browser
+<html lang="en"> to start the structure
+<head> which are the elements assosiated to top part in the browser and can be link to external source
+<body> to disply what to give to the user are aranged in this structure
+<h1> to <h6> to name the heading particulars accourding to the size of the words in decending order
+<p> paragraph tag to display the required amount of the data in the browser as same as we type
+</html> this is closing tag 
+
+
+2. buttons
+
+<button type="button/submit/reset">google search</button> button atribute will donothing while click the button and submit will try to run js file to submit enteredd data into the backend and reset will refresh the data entered in the website.
+<button type="button" onclick="alert('Hello world!')">Say Hello</button>
+<button type="button" disabled>Disabled Button</button> button will be on disabled but u can see the button
+
+3. input field
+
+ <input type="text" id="username" name="username" placeholder="Enter your username">
+
+Key attributes used with input fields include:
+type: Specifies the kind of input control to display (e.g., text, password, number, email).
+name: Assigns a name to the input, which is used to reference the data when the form is submitted to a server.
+id: Provides a unique identifier for the element, which is useful for styling with CSS, accessing with JavaScript, and associating with a <label>.
+value: Sets the initial (default) value of the input field or the text on buttons.
+placeholder: Displays a short hint in the input field before the user enters a value.
+required: A boolean attribute that specifies the field must be filled out before the form can be submitted.
+maxlength: Defines the maximum number of characters allowed in a text-based input field.
+
+Input Type 	Description
+text	A single-line text input field (the default).
+password	A single-line field where the characters are masked for security.
+email	A field for entering an email address that includes built-in browser validation.
+number	A field for entering a number, often displaying a spinner control.
+checkbox	Allows users to select zero or more options from a list.
+radio	Allows users to select only one option from a group of choices (within the same name group).
+date	A control for entering a date, which often displays a date picker.
+file	Defines a file-select field and a "Browse" button for file uploads.
+submit	A button that submits the form data to the server.  
+
+4. Anchor tags:
+
+The HTML anchor tag (<a>) is used to define a hyperlink, which links one web resource to another
+<a href="https://www.example.com">Visit Example Website</a>
+<a href="about.html">About Us</a>
+<a href="#section2">Go to Section 2</a> 
+<!-- ... later in the document ... -->
+<h2 id="section2">Section Two</h2>
+<a href="mailto:someone@example.com">Send email</a>
+<a href="tel:+1234567890">+1234567890</a>
+<a href="default.asp">
+  <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+</a>
+
+
+Attribute 	Purpose	Example
+href	Specifies the URL of the page or resource the link goes to. This is a required attribute for a functional link.	href="page.html"
+target	Specifies where to open the linked document.	target="_blank" opens the link in a new tab/window.
+title	Provides extra information about the link, often shown as a tooltip when the user hovers over it.	title="Go to the W3Schools HTML section"
+download	Prompts the user to download the target URL's resource instead of navigating to it.	download="filename.pdf"
+rel	Specifies the relationship between the current document and the linked document (e.g., nofollow, noopener, noreferrer).	rel="noopener noreferrer"
+id	Used to create an anchor mark within a page that can be linked to (replaces the deprecated name attribute).	id="section1"
+
+Styling
+Anchor tags can be styled using CSS pseudo-classes to change their appearance based on their state: 
+freeCodeCamp
+freeCodeCamp
+:link (unvisited link)
+:visited (visited link)
+:hover (user mouses over the link)
+:active (link is being clicked)
+
+5. Lists:
+
+A. Unordered list
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+B. Ordered List
+<ol>
+  <li>First step</li>
+  <li>Second step</li>
+  <li>Third step</li>
+</ol>
+C. Discreption list
+<dl>
+  <dt>HTML</dt>
+  <dd>HyperText Markup Language</dd>
+  <dt>CSS</dt>
+  <dd>Cascading Style Sheets</dd>
+</dl>
+D. Nested List
+<ul>
+  <li>Main item one</li>
+  <li>Main item two
+    <ul>
+      <li>Subitem A</li>
+      <li>Subitem B</li>
+    </ul>
+  </li>
+  <li>Main item three</li>
+</ul>
+
+
+
+
+
+
+

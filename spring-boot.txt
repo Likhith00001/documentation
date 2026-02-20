@@ -1,5 +1,14 @@
 Spring boot project 
 
+it has four methods
+
+Get
+Post
+Update
+Delete
+
+latest java to be installed first
+
 first we need to download the project maven file from https://start.spring.io/
 
 Project: Maven
@@ -16,10 +25,61 @@ Click → Generate
 then go to main project file 
 
 run mvn spring-boot:run or mvnw spring-boot:run
+.\mvnw spring-boot:run // run this if mvn not installed
 
 once port setup then test port in localhost:8080/
 
-then create the file in same path then inside file
-@restControllar is an class inbuilt in spring that call the spring to exucute the class 
+then create the file in same path then inside file called controller in the main file path that all the paths of url create from it
 
-@getmapping is the class which map the id to get details from the server which create the path to the server
+1. Get method:
+
+@RestControllar is an class inbuilt in spring that call the spring to exucute the class and inside it all the paths where created.
+@RestController
+public class HelloController {
+
+    @GetMapping("/hello")
+    public String sayHello() {
+        return "Hello Likhith! Spring Boot is working 🚀";
+    }
+
+@GetMapping is the class inside the restcontrler that create the path of the url and map the details to the client from the server. 
+
+
+@GetMapping("/hello")
+    public String sayHello() {
+        return "Hello Likhith! Spring Boot is working 🚀";
+    }
+
+
+@RestController
+public class HelloController {
+
+    @GetMapping("/hello")
+    public String sayHello() {
+        return "Hello Likhith! Spring Boot is working 🚀";
+    }
+    @GetMapping("/hi")
+    public String sayHi() {
+        return "hi mate u are doing great";
+    }
+}
+
+
+@PathVariable is the class which give the string entered in the url path and parse that to form the as per required loclhost/8088/user/Likhith it will parse the likhith and return it
+
+@GetMapping("/user/{name}")
+    public User getMethodName(@PathVariable String name) {
+        return new User(name,22);
+    }
+
+
+@RequestParam is the class which give the value assiend to the varible declired in the code from the url path http://localhost:8080/info?city=Banglore here banglore is extracted
+
+@GetMapping("/info")
+public String getInfo(@RequestParam String city) {
+    return "You are from " + city;
+}
+
+
+
+2. Post method
